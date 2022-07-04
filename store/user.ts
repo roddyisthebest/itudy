@@ -3,10 +3,9 @@ import { ActionContext } from 'vuex'
 interface info {
   idx: number | null
   email: string
-  password: string | null
+  imageUrl: string
   nickname: string
-  type: 'STUDENT' | string
-  oauth: 'EMAIL' | string
+  oauth: 'KAKAO' | string
   createdAt: Date
 }
 
@@ -32,10 +31,14 @@ export const mutations = {
     state.snsLoginFlag = true
     state.refreshToken = payload.refresh
     state.accessToken = payload.access
+    console.log(payload)
   },
   logout(state: State) {
     state.info = {}
     state.online = false
+  },
+  setInfo(state: State, payload: { info: info }) {
+    state.info = payload.info
   },
 }
 

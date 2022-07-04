@@ -3,12 +3,13 @@
     <div id="navbarWrapper">
       <div id="navbar" :class="$mq">
         <div id="left">
-          <img
-            @click="test"
-            class="img"
-            :src="require('@/assets/logo/ItudyLogo.png')"
-            alt=""
-          />
+          <nuxt-link to="/" :style="{ display: 'flex', alignItems: 'center' }">
+            <img
+              class="img"
+              :src="require('@/assets/logo/ItudyLogo.png')"
+              alt=""
+          /></nuxt-link>
+
           <nuxt-link to="/">
             <span class="link">커뮤니티</span>
           </nuxt-link>
@@ -33,7 +34,7 @@
           >
             <span id="loginText">로그인</span>
           </button>
-          <nuxt-link to="/" v-else>
+          <nuxt-link to="/myinfo/" v-else>
             <span class="material-icons link-right">account_circle</span>
           </nuxt-link>
         </div>
@@ -83,7 +84,7 @@ export default Vue.extend({
       console.log('jello')
     },
     kakaoLogin() {
-      const loginPopup = window.open(
+      window.open(
         'http://api.i-tudy.com/oauth2/authorization/kakao',
         '카카오 로그인',
         'width=600, height=700, left=420, top:471,toolbar=no, menubar=no, scrollbars=no, resizable=no'
@@ -100,9 +101,7 @@ export default Vue.extend({
       }
     },
   },
-  created() {
-    console.log(this.snsLoginCheck, 'ehl')
-  },
+  created() {},
   components: {
     TextVue,
     Popup,

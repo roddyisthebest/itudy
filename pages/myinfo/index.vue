@@ -126,34 +126,48 @@
       </div>
       <div id="navigateColumn">
         <button class="navigateButton">
-          <TextVue
-            :color="'black'"
-            :contents="'이력서 정보'"
-            :size="18"
-            :weight="'bold'"
-          ></TextVue>
+          <nuxt-link to="/myinfo/">
+            <TextVue
+              :color="$route.name === 'myinfo-index' ? 'black' : '#CECECE'"
+              :contents="'이력서 정보'"
+              :size="18"
+              :weight="'bold'"
+            ></TextVue>
+          </nuxt-link>
         </button>
         <button class="navigateButton">
-          <TextVue
-            :color="'#CECECE'"
-            :contents="'지원현황'"
-            :size="18"
-            :weight="'bold'"
-          ></TextVue></button
+          <nuxt-link to="/myinfo/apply">
+            <TextVue
+              :color="
+                $route.name === 'myinfo-index-apply' ? 'black' : '#CECECE'
+              "
+              :contents="'지원현황'"
+              :size="18"
+              :weight="'bold'"
+            ></TextVue
+          ></nuxt-link></button
         ><button class="navigateButton">
-          <TextVue
-            :color="'#CECECE'"
-            :contents="'스터디'"
-            :size="18"
-            :weight="'bold'"
-          ></TextVue></button
+          <nuxt-link to="/myinfo/study">
+            <TextVue
+              :color="
+                $route.name === 'myinfo-index-study' ? 'black' : '#CECECE'
+              "
+              :contents="'스터디'"
+              :size="18"
+              :weight="'bold'"
+            ></TextVue
+          ></nuxt-link></button
         ><button class="navigateButton">
-          <TextVue
-            :color="'#CECECE'"
-            :contents="'찜'"
-            :size="18"
-            :weight="'bold'"
-          ></TextVue>
+          <nuxt-link to="/myinfo/favorite">
+            <TextVue
+              :color="
+                $route.name === 'myinfo-index-favorite' ? 'black' : '#CECECE'
+              "
+              :contents="'찜'"
+              :size="18"
+              :weight="'bold'"
+            ></TextVue
+          ></nuxt-link>
         </button>
       </div>
       <nuxt-child />
@@ -180,6 +194,13 @@ export default Vue.extend({
   components: {
     TextVue,
   },
+  asyncData({ route }) {
+    // console.log(route.name)
+  },
+
+  // created() {
+  //   console.log(this.$router)
+  // },
 })
 </script>
 
@@ -210,7 +231,7 @@ export default Vue.extend({
         width: 100%;
         .title {
           padding-bottom: 20px;
-          border-bottom: 1.5px solid #f5f7fd;
+          border-bottom: 1px solid #e1e1e1;
           height: 30px;
         }
 
@@ -220,7 +241,7 @@ export default Vue.extend({
           #myInfo {
             height: 100%;
             width: 100%;
-            border: 1.5px solid#f5f7fd;
+            border: 1px solid #e1e1e1;
             border-radius: 20px;
             display: flex;
             gap: 0 30px;
@@ -232,7 +253,7 @@ export default Vue.extend({
               flex-direction: column;
               height: 110px;
               #editButton {
-                border: 1px solid #ecedff;
+                border: 1px solid #e1e1e1;
                 background-color: white;
                 padding: 10px;
                 border-radius: 10px;
@@ -252,7 +273,7 @@ export default Vue.extend({
           #myStatus {
             height: 100%;
             width: 100%;
-            border: 1.5px solid#f5f7fd;
+            border: 1.5px solid #f5f7fd;
             border-radius: 20px;
             display: flex;
             gap: 0 30px;
@@ -276,7 +297,7 @@ export default Vue.extend({
       display: flex;
       padding-bottom: 25px;
       gap: 0 25px;
-      border-bottom: 1.5px solid #f5f7fd;
+      border-bottom: 1px solid #e1e1e1;
       .navigateButton {
         border: none;
         background-color: transparent;
