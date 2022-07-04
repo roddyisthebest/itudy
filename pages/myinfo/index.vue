@@ -194,9 +194,7 @@ export default Vue.extend({
   components: {
     TextVue,
   },
-  asyncData({ route }) {
-    // console.log(route.name)
-  },
+  middleware: ['auth'],
 
   // created() {
   //   console.log(this.$router)
