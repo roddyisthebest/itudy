@@ -14,7 +14,7 @@
           <div class="myInfoWrapper">
             <div id="myInfo">
               <img
-                src="https://pbs.twimg.com/profile_images/1499021634715668480/FrKd2k3S_400x400.jpg"
+                :src="$store.state.user.info.imageUrl"
                 alt=""
                 :style="{
                   width: '110px',
@@ -28,13 +28,13 @@
                 <div>
                   <TextVue
                     :color="'black'"
-                    :contents="'애강'"
+                    :contents="$store.state.user.info.nickname"
                     :size="20"
                     :weight="'bold'"
                   ></TextVue>
                   <TextVue
                     :color="'#A3A3A3'"
-                    :contents="'RHKD6351@naver.com'"
+                    :contents="$store.state.user.info.email"
                     :size="13"
                     :weight="'bold'"
                   ></TextVue>
@@ -170,7 +170,9 @@
           ></nuxt-link>
         </button>
       </div>
-      <nuxt-child />
+      <div :style="{ padding: '0 30px' }">
+        <nuxt-child />
+      </div>
     </div>
     <!-- <div id="navigateColumn">
         <button class="navigateButton">
@@ -291,7 +293,7 @@ export default Vue.extend({
       }
     }
     #navigateColumn {
-      margin: 50px 30px;
+      margin: 50px 30px 0px 30px;
       display: flex;
       padding-bottom: 25px;
       gap: 0 25px;
