@@ -1,0 +1,37 @@
+body {
+  font-family: 'regular', Fallback, sans-serif;
+  min-width: 800px;
+
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+@font-face {
+  font-family: 'bold';
+  src: local('Spoqa Han Sans Bold'),
+    url('@/assets/font/Spoqa Han Sans Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'light';
+  src: local('Spoqa Han Sans Light'),
+    url('@/assets/font/Spoqa Han Sans Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'regular';
+  src: local('Spoqa Han Sans Regular'),
+    url('@/assets/font/Spoqa Han Sans Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'thin';
+  src: local('Spoqa Han Sans Thin'),
+    url('@/assets/font/Spoqa Han Sans Thin.ttf') format('truetype');
+}
