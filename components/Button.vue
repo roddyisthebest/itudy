@@ -37,13 +37,13 @@ export default Vue.extend({
   props: {
     func: Function,
     text: String,
-    textSize: String,
+    textSize: Number,
     textColor: String,
     bgColor: String,
     iconText: String,
     width: Number,
     height: Number,
-    iconSize: String,
+    iconSize: Number,
   },
 })
 </script>

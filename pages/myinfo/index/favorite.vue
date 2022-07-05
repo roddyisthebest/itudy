@@ -24,18 +24,98 @@
         :iconSize="20"
       ></Button>
     </div>
+    <div id="containerList">
+      <Recruiment
+        :subTitle="'안녕하세요. 저희는 한달에 10억 수익을 얻을 수 있는 어플을 개발 중입니다. 이거 들어오시면 바로 카카오한테...'"
+        :title="'안드로이드  어플리케이션 개발'"
+        :stacks="stacks"
+        :favorite="true"
+      ></Recruiment>
+      <Recruiment
+        :subTitle="'안녕하세요. 저희는 한달에 10억 수익을 얻을 수 있는 어플을 개발 중입니다. 이거 들어오시면 바로 카카오한테...'"
+        :title="'안드로이드  어플리케이션 개발'"
+        :stacks="stacks"
+        :favorite="false"
+      ></Recruiment>
+      <Recruiment
+        :subTitle="'안녕하세요. 저희는 한달에 10억 수익을 얻을 수 있는 어플을 개발 중입니다. 이거 들어오시면 바로 카카오한테...'"
+        :title="'안드로이드  어플리케이션 개발'"
+        :stacks="stacks"
+        :favorite="false"
+      ></Recruiment>
+      <Recruiment
+        :subTitle="'안녕하세요. 저희는 한달에 10억 수익을 얻을 수 있는 어플을 개발 중입니다. 이거 들어오시면 바로 카카오한테...'"
+        :title="'안드로이드  어플리케이션 개발'"
+        :stacks="stacks"
+        :favorite="false"
+      ></Recruiment>
+      <Recruiment
+        :subTitle="'안녕하세요. 저희는 한달에 10억 수익을 얻을 수 있는 어플을 개발 중입니다. 이거 들어오시면 바로 카카오한테...'"
+        :title="'안드로이드  어플리케이션 개발'"
+        :stacks="stacks"
+        :favorite="true"
+      ></Recruiment>
+      <Recruiment
+        :subTitle="'안녕하세요. 저희는 한달에 10억 수익을 얻을 수 있는 어플을 개발 중입니다. 이거 들어오시면 바로 카카오한테...'"
+        :title="'안드로이드  어플리케이션 개발'"
+        :stacks="stacks"
+        :favorite="false"
+      ></Recruiment>
+      <Recruiment
+        :subTitle="'안녕하세요. 저희는 한달에 10억 수익을 얻을 수 있는 어플을 개발 중입니다. 이거 들어오시면 바로 카카오한테...'"
+        :title="'안드로이드  어플리케이션 개발'"
+        :stacks="stacks"
+        :favorite="false"
+      ></Recruiment>
+      <Recruiment
+        :subTitle="'안녕하세요. 저희는 한달에 10억 수익을 얻을 수 있는 어플을 개발 중입니다. 이거 들어오시면 바로 카카오한테...'"
+        :title="'안드로이드  어플리케이션 개발'"
+        :stacks="stacks"
+        :favorite="false"
+      ></Recruiment>
+      <Recruiment
+        :subTitle="'안녕하세요. 저희는 한달에 10억 수익을 얻을 수 있는 어플을 개발 중입니다. 이거 들어오시면 바로 카카오한테...'"
+        :title="'안드로이드  어플리케이션 개발'"
+        :stacks="stacks"
+        :favorite="true"
+      ></Recruiment>
+      <Recruiment
+        :subTitle="'안녕하세요. 저희는 한달에 10억 수익을 얻을 수 있는 어플을 개발 중입니다. 이거 들어오시면 바로 카카오한테...'"
+        :title="'안드로이드  어플리케이션 개발'"
+        :stacks="stacks"
+        :favorite="false"
+      ></Recruiment>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 import Button from '~/components/Button.vue'
+import Recruiment from '~/components/Recruiment.vue'
+
 export default Vue.extend({
-  components: { Button },
+  components: { Button, Recruiment },
   methods: {
     test() {
       console.log('test')
     },
+  },
+  data() {
+    return {
+      stacks: [
+        {
+          id: 0,
+          name: 'vue',
+          img: 'https://holaworld.io/images/languages/vue.svg',
+        },
+        {
+          id: 1,
+          name: 'react',
+          img: 'https://holaworld.io/images/languages/react.svg',
+        },
+      ],
+    }
   },
 })
 </script>
@@ -47,5 +127,12 @@ export default Vue.extend({
   justify-content: flex-end;
   gap: 15px;
   padding: 30px 0;
+}
+
+#containerList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 20px;
+  margin: 20px 0;
 }
 </style>

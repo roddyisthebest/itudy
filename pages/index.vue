@@ -218,9 +218,7 @@ export default Vue.extend({
   display: flex;
   justify-content: center;
   background-color: #f5f7fd;
-  padding: 0 30px;
   flex-direction: row;
-
   &.infinity {
     padding: 0;
   }

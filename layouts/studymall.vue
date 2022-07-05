@@ -64,7 +64,11 @@
         </div>
       </Popup>
     </div>
-    <nuxt></nuxt>
+    <div id="child-container">
+      <div id="child-content">
+        <nuxt></nuxt>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -125,7 +129,18 @@ export default Vue.extend({
 #container {
   position: relative;
 }
+#child-container {
+  display: flex;
+  justify-content: center;
+  background-color: #f5f7fd;
+  padding: 0 30px;
+  flex-direction: row;
 
+  #child-content {
+    background-color: white;
+    width: 1100px;
+  }
+}
 #popup {
   position: fixed;
   z-index: 50;
