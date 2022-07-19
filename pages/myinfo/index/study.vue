@@ -24,14 +24,41 @@
         :iconSize="13"
       ></Button>
     </div>
+    <div id="containerList">
+      <StudyBox
+        :boss="'rhkd6351'"
+        :category="'웹개발'"
+        :name="'LB STUDIO'"
+        :people="5"
+      ></StudyBox>
+      <StudyBox
+        :boss="'rhkd6351'"
+        :category="'앱개발'"
+        :name="'LB STUDIO'"
+        :people="5"
+      ></StudyBox>
+      <StudyBox
+        :boss="'rhkd6351'"
+        :category="'블록체인'"
+        :name="'LB STUDIO'"
+        :people="5"
+      ></StudyBox>
+      <StudyBox
+        :boss="'rhkd6351'"
+        :category="'인공지능'"
+        :name="'LB STUDIO'"
+        :people="5"
+      ></StudyBox>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 import Button from '~/components/Button.vue'
+import StudyBox from '~/components/StudyBox.vue'
 export default Vue.extend({
-  components: { Button },
+  components: { Button, StudyBox },
   methods: {
     test() {
       console.log('test')
@@ -47,5 +74,12 @@ export default Vue.extend({
   justify-content: flex-end;
   gap: 15px;
   padding: 30px 0;
+}
+
+#containerList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 20px;
+  justify-content: flex-start;
 }
 </style>
